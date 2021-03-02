@@ -1,28 +1,41 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="main_wrapper">
+    <MethodCalculator></MethodCalculator>
+    <ComputedCalculator></ComputedCalculator>
+    <MethodProjectLists></MethodProjectLists>
+    <ComputedProjectLists></ComputedProjectLists>
+    <Query></Query>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MethodCalculator from './components/MethodCalculator'
+import ComputedCalculator from './components/ComputedCalculator'
+import MethodProjectLists from './components/MethodProjectLists'
+import ComputedProjectLists from './components/ComputedProjectLists'
+import Query from './components/Query'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MethodCalculator,
+    ComputedCalculator,
+    MethodProjectLists,
+    ComputedProjectLists,
+    Query
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body {
+    background-color: #e2e1e5;
+    padding: 0;
+    margin: 0;
+  }
+  .main_wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 8px;
+  }
 </style>
